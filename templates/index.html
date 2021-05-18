@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulaire sas franklin</title>
+    <link rel="stylesheet" href="/franklin/static/css/style.css">
+</head>
+<body>
+    <form action="" method="post" id="form-user">
+        <div>
+            <p class="alert form-message"></p>
+        </div>
+        <h1>Formulaire de contact</h1>
+        <div class="form-item">
+            <input type="text" name="firstname" placeholder="Prenom**" class="required form-user-field" title="ex: Theodora">        
+        </div>
+        <div class="form-item">
+            <input type="text" name="lastname" placeholder="Nom**" class="required form-user-field" title="ex: Toulemonde">        
+        </div>
+        <div class="form-item">
+            <!-- type="email" is not good for javascript -->
+            <input type="text" name="email" placeholder="Email**" class=" email required form-user-field" title="ex: theodora@example.com">
+        </div>
+        <div class="form-item">
+            <textarea name="message" placeholder="Message" class="form-user-field"></textarea>
+        </div>
+        <div class="form-item">
+            <p class="alert instructions">** champs obligatoires</p>
+        </div>
+        <div class="form-item">
+            <input type="submit" value="envoyer" title="envoyer le formulaire">
+        </div>
+    </form>
+    <script src="/franklin/static/js/functions.js"></script>
+    <script src="/franklin/static/js/script.js"></script>
+</body>
+</html>

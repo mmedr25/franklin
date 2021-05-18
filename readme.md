@@ -1,0 +1,1 @@
+Je n'ai pas tester envoie de mail parce que j'ai une config particulier sur mon poste de travail et mes serveurs  sont entrés en conflits

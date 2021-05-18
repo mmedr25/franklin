@@ -1,0 +1,100 @@
+// my variables
+$gutter: 1em; // spacing between elements
+
+// breaking points
+// $bpSmall:  480px;
+$bpMedium: 768px;
+$bpLarge:  960px;
+// $bpXlarge: 1200px;
+
+// colours
+$colorAlert: #ff0000;
+$colorSuccess: #066906;
+$color1: #000000;
+$color2: #1253ca;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+form {
+    .alert {
+        color: $colorAlert;
+    }
+    .success {
+        color: $colorSuccess;
+    }
+    .error {
+        background: rgba($colorAlert, 0.3);
+    }
+
+}
+#form-user {
+    border: 1px solid $color1;
+    width: 40vw;
+    padding: $gutter * 2;
+
+    @media only screen and (max-width: $bpLarge){
+        width: 60vw; 
+    }
+    @media only screen and (max-width: $bpMedium){
+        width: 90vw; 
+    }
+
+    .form-item {
+        text-align: center;
+        margin-top: $gutter;
+        // &:not(:first-of-type){
+            // margin-top: $gutter;
+        // }
+    }
+
+    input, textarea {
+        width: 100%;
+        border: 1px solid $color1;
+        outline: none;
+        &:focus {
+            border: 2px solid $color2;
+        }
+    }
+
+    input {
+        height: 48px;
+        padding: 0 $gutter;
+        font-size: 1.1em;
+        &[type="submit"] {
+            text-transform: uppercase;
+        }
+    }
+
+    textarea{
+        resize: vertical;
+        height: 20vh;
+        padding: $gutter;
+        font-size: 1.3em;
+
+    }
+    .instructions {
+        text-align: left;
+    }
+    .form-message:not(:empty) {
+        text-align: center;
+        margin-bottom: $gutter;
+        text-transform: uppercase;
+        &::before {
+            content: "\002a3b";
+            margin-right: $gutter / 2;
+            // font-size: 1em;
+        }
+    }
+}
